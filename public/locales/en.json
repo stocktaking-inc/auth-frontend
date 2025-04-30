@@ -5,7 +5,6 @@
       "description": "Enter your email below to login to your account",
       "email": "Email",
       "password": "Password",
-      "forgot_your_password": "Forgot your password?",
       "to_login": "Login",
       "no_account": "Don&apos;t have an account?"
     },
@@ -41,25 +40,6 @@
       "error": {
         "title": "Registration failed",
         "description": "Something went wrong. Please try again"
-      }
-    }
-  },
-  "forgot_password": {
-    "form": {
-      "title": "Forgot Password",
-      "description": "Enter your email address below to reset your password",
-      "email": "Email",
-      "to_reset": "Reset Password",
-      "remember_password": "Remember your password?"
-    },
-    "toasts": {
-      "success": {
-        "title": "Reset link sent",
-        "description": "Check your email for a password reset link"
-      },
-      "error": {
-        "title": "Failed to send reset link",
-        "description": "Please check your email and try again"
       }
     }
   },

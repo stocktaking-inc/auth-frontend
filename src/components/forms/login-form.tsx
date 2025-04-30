@@ -58,12 +58,6 @@ export const LoginForm = () => {
             <div className="grid gap-2">
               <div className="flex items-center">
                 <Label htmlFor="password">{t('login.form.password')}</Label>
-                <Link
-                  to={routes.AUTH.FORGOT_PASSWORD}
-                  className="ml-auto inline-block text-sm text-blue-600"
-                >
-                  {t('login.form.forgot_your_password')}
-                </Link>
               </div>
               <Input
                 id="password"

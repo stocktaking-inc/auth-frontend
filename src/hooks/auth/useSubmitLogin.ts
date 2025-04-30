@@ -5,15 +5,15 @@ import { useToast } from '@/hooks/use-toast'
 import { post } from '@/config/api/api'
 import { endpoints } from '@/config/api/endpoints'
 
-import {LoginResponse, LoginRequest} from './types'
+import {AuthResponse, LoginRequest} from './types'
 
 export const useSubmitLogin = () => {
   const { t } = useTranslation()
   const { toast } = useToast()
 
-  return useMutation<LoginResponse, Error, LoginRequest>({
+  return useMutation<AuthResponse, Error, LoginRequest>({
     mutationFn: async data => {
-      return post<LoginResponse>(endpoints.AUTH.LOGIN, data)
+      return post<AuthResponse>(endpoints.AUTH.LOGIN, data)
     },
     onSuccess: data => {
       toast({

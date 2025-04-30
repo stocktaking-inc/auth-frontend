@@ -26,8 +26,3 @@ export const getRegisterSchema = (t: TranslationFunction) =>
       message: t('errors.password_mismatch'),
       path: ['confirmPassword']
     })
-
-export const getForgotPasswordSchema = (t: TranslationFunction) =>
-  z.object({
-    email: z.string().email(t('errors.invalid_email'))
-  })

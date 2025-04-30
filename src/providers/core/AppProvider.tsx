@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom'
 
-import { ForgotPasswordForm, LoginForm, RegisterForm } from '@/components/forms'
+import { LoginForm, RegisterForm } from '@/components/forms'
 
 import { routes } from '@/config/routes.ts'
 
@@ -17,10 +17,6 @@ export const AppProvider = () => {
             <Route
               path={routes.AUTH.REGISTER}
               element={<RegisterForm />}
-            />
-            <Route
-              path={routes.AUTH.FORGOT_PASSWORD}
-              element={<ForgotPasswordForm />}
             />
             <Route
               path={routes.HOME}
