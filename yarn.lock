@@ -3325,10 +3325,10 @@ react-dom@^18.3.1:
     loose-envify "^1.1.0"
     scheduler "^0.23.2"
 
-react-hook-form@^7.53.2:
-  version "7.54.2"
-  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.54.2.tgz#8c26ed54c71628dff57ccd3c074b1dd377cfb211"
-  integrity sha512-eHpAUgUjWbZocoQYUHposymRb4ZP6d0uwUnooL2uOybA9/3tPUvoAKqEWK1WaSiTxxOfTpffNZP7QwlnM3/gEg==
+react-hook-form@^7.56.1:
+  version "7.56.1"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.56.1.tgz#45b2040fef997b873d656959d2e7f864f35bf95d"
+  integrity sha512-qWAVokhSpshhcEuQDSANHx3jiAEFzu2HAaaQIzi/r9FNPm1ioAvuJSD4EuZzWd7Al7nTRKcKPnBKO7sRn+zavQ==
 
 react-i18next@^15.4.0:
   version "15.4.1"
@@ -3607,6 +3607,7 @@ set-cookie-parser@^2.6.0:
     "@radix-ui/react-label" "^2.1.0"
     "@radix-ui/react-slot" "^1.1.0"
     "@radix-ui/react-toast" "^1.2.2"
+    "@tanstack/react-query" "^5.74.11"
     axios "^1.7.7"
     class-variance-authority "^0.7.0"
     clsx "^2.1.1"
@@ -3616,10 +3617,10 @@ set-cookie-parser@^2.6.0:
     lucide-react "^0.460.0"
     react "^18.3.1"
     react-dom "^18.3.1"
-    react-hook-form "^7.53.2"
+    react-hook-form "^7.56.1"
     react-i18next "^15.4.0"
     react-router-dom "^7.0.1"
-    shadow "file:../../../../AppData/Local/Yarn/Cache/v6/npm-shadow-0.0.2-99876ebf-d6be-4dcf-88e2-4f43528e66cf-1745962250493/node_modules/shadow"
+    shadow "file:."
     tailwind-merge "^2.5.4"
     tailwindcss-animate "^1.0.7"
     zod "^3.23.8"
