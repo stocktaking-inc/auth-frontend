@@ -5,11 +5,13 @@ interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
   _retry?: boolean
 }
 
-export const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
+const api = axios.create({
+  baseURL: 'https://localhost:5000',
+  headers: {
+    'Content-Type': 'application/json',
+  },
   withCredentials: true,
-  validateStatus: status => status >= 200 && status < 300
-})
+});
 
 api.interceptors.request.use(
   config => {
@@ -51,16 +53,20 @@ api.interceptors.response.use(
 
 export const post = async <T>(url: string, data: unknown): Promise<T> => {
   try {
-    const response = await api.post<T>(url, data)
-    return response.data
+    const response = await api.post<T>(url, data);
+    console.log('API Response Headers:', response.headers);
+    console.log('Set-Cookie:', response.headers['set-cookie']); // Для отладки
+    return response.data;
   } catch (error) {
     if (error instanceof AxiosError && error.response) {
       const message =
         error.response.data?.message ||
-        `Error ${error.response.status}: ${error.response.statusText}`
-      throw new Error(message)
+        `Error ${error.response.status}: ${error.response.statusText}`;
+      console.error('API Error:', message);
+      throw new Error(message);
     } else {
-      throw new Error('Network error. Please check your connection.')
+      console.error('Network Error:', error);
+      throw new Error('Network error. Please check your connection.');
     }
   }
-}
+};
