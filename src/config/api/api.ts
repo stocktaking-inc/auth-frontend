@@ -8,10 +8,10 @@ interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
 const api = axios.create({
   baseURL: 'http://localhost:5209',
   headers: {
-    'Content-Type': 'application/json',
+    'Content-Type': 'application/json'
   },
-  withCredentials: true,
-});
+  withCredentials: true
+})
 
 api.interceptors.request.use(
   config => {
@@ -55,7 +55,7 @@ export const post = async <T>(url: string, data: unknown): Promise<T> => {
   try {
     const response = await api.post<T>(url, data)
     console.log('API Response Headers:', response.headers)
-    console.log('Set-Cookie:', response.headers['set-cookie']) // Для отладки
+    console.log('Set-Cookie:', response.headers['set-cookie'])
     return response.data
   } catch (error) {
     if (error instanceof AxiosError && error.response) {
