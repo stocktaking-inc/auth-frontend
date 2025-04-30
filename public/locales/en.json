@@ -10,8 +10,14 @@
       "no_account": "Don&apos;t have an account?"
     },
     "toasts": {
-      "title": "Login failed",
-      "description": "Something went wrong. Please try again"
+      "success": {
+        "title": "Login successful",
+        "description": "Welcome back! Redirecting to the main app..."
+      },
+      "error": {
+        "title": "Login failed",
+        "description": "Invalid email or password. Please try again."
+      }
     }
   },
   "register": {
