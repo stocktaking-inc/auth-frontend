@@ -5,7 +5,7 @@ import { useToast } from '@/hooks/use-toast'
 import { post } from '@/config/api/api'
 import { endpoints } from '@/config/api/endpoints'
 
-import {AuthResponse, RegisterRequest} from "./types.ts";
+import { AuthResponse, RegisterRequest } from './types.ts'
 
 export const useSubmitRegister = () => {
   const { t } = useTranslation()

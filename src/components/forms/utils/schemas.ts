@@ -7,8 +7,8 @@ interface TranslationFunction {
 export const getLoginSchema = (t: TranslationFunction) =>
   z.object({
     email: z.string().email(t('errors.invalid_email')).max(100, t('errors.invalid_email')),
-    password: z.string().min(6, t('errors.short_password')).max(100, t('errors.short_password')),
-  });
+    password: z.string().min(6, t('errors.short_password')).max(100, t('errors.short_password'))
+  })
 
 export const getRegisterSchema = (t: TranslationFunction) =>
   z

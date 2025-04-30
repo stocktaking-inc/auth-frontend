@@ -5,7 +5,7 @@ import { useToast } from '@/hooks/use-toast'
 import { post } from '@/config/api/api'
 import { endpoints } from '@/config/api/endpoints'
 
-import {AuthResponse, LoginRequest} from './types'
+import { AuthResponse, LoginRequest } from './types'
 
 export const useSubmitLogin = () => {
   const { t } = useTranslation()
