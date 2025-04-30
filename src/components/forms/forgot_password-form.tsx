@@ -42,16 +42,16 @@ export const ForgotPasswordForm = () => {
   return (
     <Card className='mx-auto max-w-sm'>
       <CardHeader>
-        <CardTitle className='text-2xl'>{t('forgot_password.title')}</CardTitle>
+        <CardTitle className='text-2xl'>{t('forgot_password.form.title')}</CardTitle>
         <CardDescription className='w-full text-center text-sm'>
-          {t('forgot_password.description')}
+          {t('forgot_password.form.description')}
         </CardDescription>
       </CardHeader>
       <CardContent>
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className='grid gap-4'>
             <div className='grid gap-2'>
-              <Label htmlFor='email'>{t('forgot_password.email')}</Label>
+              <Label htmlFor='email'>{t('forgot_password.form.email')}</Label>
               <Input
                 id='email'
                 type='email'
@@ -66,12 +66,12 @@ export const ForgotPasswordForm = () => {
               className='w-full'
               disabled={Object.keys(errors).length > 0 || !isValid}
             >
-              {t('forgot_password.to_reset')}
+              {t('forgot_password.form.to_reset')}
             </Button>
           </div>
         </form>
         <div className='mt-4 text-center text-sm'>
-          {t('forgot_password.remember_password')}{' '}
+          {t('forgot_password.form.remember_password')}{' '}
           <Link
             to={routes.AUTH.LOGIN}
             className='underline text-blue-600'
