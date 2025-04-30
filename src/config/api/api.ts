@@ -6,12 +6,12 @@ interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
 }
 
 const api = axios.create({
-  baseURL: 'https://localhost:5000',
+  baseURL: 'http://localhost:5209',
   headers: {
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
   },
-  withCredentials: true
-})
+  withCredentials: true,
+});
 
 api.interceptors.request.use(
   config => {
