@@ -1,4 +1,3 @@
 User-agent: *
 Disallow:
-Host:
-Sitemap: /sitemap.xml
+Sitemap: stocktaking-auth.vercel.app/sitemap.xml
