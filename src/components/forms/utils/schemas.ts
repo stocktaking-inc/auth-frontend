@@ -10,7 +10,7 @@ export const getLoginSchema = (t: TranslationFunction) =>
     password: z.string().min(6, t('errors.short_password'))
   })
 
-export const getRegisterSchema = (t: (key: string) => string) =>
+export const getRegisterSchema = (t: TranslationFunction) =>
   z
     .object({
       name: z
