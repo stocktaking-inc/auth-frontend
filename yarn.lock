@@ -791,17 +791,17 @@
   resolved "https://registry.yarnpkg.com/@rollup/rollup-win32-x64-msvc/-/rollup-win32-x64-msvc-4.40.1.tgz#8078b71fe0d5825dcbf83d52a7dc858b39da165c"
   integrity sha512-ECyOuDeH3C1I8jH2MK1RtBJW+YPMvSfT0a5NN0nHfQYnDSJ6tUiZH3gzwVP5/Kfh/+Tt7tpWVF9LXNTnhTJ3kA==
 
-"@tanstack/query-core@5.74.9":
-  version "5.74.9"
-  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.74.9.tgz#35d5b1075663072bea22aa3ce21508b195306ecd"
-  integrity sha512-qmjXpWyigDw4SfqdSBy24FzRvpBPXlaSbl92N77lcrL+yvVQLQkf0T6bQNbTxl9IEB/SvVFhhVZoIlQvFnNuuw==
+"@tanstack/query-core@5.75.0":
+  version "5.75.0"
+  resolved "https://registry.yarnpkg.com/@tanstack/query-core/-/query-core-5.75.0.tgz#6a29620a58cf91cac5f804dde44bb8904df071d7"
+  integrity sha512-rk8KQuCdhoRkzjRVF3QxLgAfFUyS0k7+GCQjlGEpEGco+qazJ0eMH6aO1DjDjibH7/ik383nnztua3BG+lOnwg==
 
-"@tanstack/react-query@^5.74.11":
-  version "5.74.11"
-  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.74.11.tgz#636f321ba3ee86060d15a961517a292ad57cb754"
-  integrity sha512-FFhn9ZiYRUOsxLAWZYxVfQTpVE7UWRaAeHJIWVDHKlmZZGc16rMHW9KrFZ8peC4hA71QUf/shJD8dPSMqDnRmA==
+"@tanstack/react-query@^5.75.2":
+  version "5.75.2"
+  resolved "https://registry.yarnpkg.com/@tanstack/react-query/-/react-query-5.75.2.tgz#6397277c90aa4d4203bf1b53738397bc51c00d7c"
+  integrity sha512-8F8VOsWUfSkCFoi62O9HSZT9jDgg28Ln8Z2dYKfRo/O2A0sgvr0uxTuNoon3PPXoDuHofv5V3elBI1M2Gh1MPg==
   dependencies:
-    "@tanstack/query-core" "5.74.9"
+    "@tanstack/query-core" "5.75.0"
 
 "@types/babel__core@^7.20.5":
   version "7.20.5"
@@ -3614,7 +3614,7 @@ set-cookie-parser@^2.6.0:
     "@radix-ui/react-label" "^2.1.0"
     "@radix-ui/react-slot" "^1.2.0"
     "@radix-ui/react-toast" "^1.2.2"
-    "@tanstack/react-query" "^5.74.11"
+    "@tanstack/react-query" "^5.75.2"
     axios "^1.7.7"
     class-variance-authority "^0.7.0"
     clsx "^2.1.1"
@@ -3627,7 +3627,7 @@ set-cookie-parser@^2.6.0:
     react-hook-form "^7.56.1"
     react-i18next "^15.4.0"
     react-router-dom "^7.0.1"
-    shadow "file:../../../../AppData/Local/Yarn/Cache/v6/npm-shadow-0.0.2-5a408cfc-138a-4efb-a6df-83272b10f05e-1745979131676/node_modules/shadow"
+    shadow "file:."
     tailwind-merge "^2.5.4"
     tailwindcss-animate "^1.0.7"
     zod "^3.24.3"
