@@ -6,7 +6,7 @@ interface CustomAxiosRequestConfig extends InternalAxiosRequestConfig {
 }
 
 const api = axios.create({
-  baseURL: 'http://localhost:5209',
+  baseURL: import.meta.env.VITE_BACKEND_API_URL as string,
   headers: {
     'Content-Type': 'application/json'
   },
