@@ -3627,7 +3627,7 @@ set-cookie-parser@^2.6.0:
     react-hook-form "^7.56.1"
     react-i18next "^15.4.0"
     react-router-dom "^7.0.1"
-    shadow "file:../../../../AppData/Local/Yarn/Cache/v6/npm-shadow-0.0.2-5a408cfc-138a-4efb-a6df-83272b10f05e-1745979131676/node_modules/shadow"
+    shadow "file:."
     tailwind-merge "^2.5.4"
     tailwindcss-animate "^1.0.7"
     zod "^3.24.3"
@@ -4015,10 +4015,10 @@ typescript-eslint@^8.11.0:
     "@typescript-eslint/parser" "8.31.1"
     "@typescript-eslint/utils" "8.31.1"
 
-typescript@~5.6.2:
-  version "5.6.3"
-  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.6.3.tgz#5f3449e31c9d94febb17de03cc081dd56d81db5b"
-  integrity sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==
+typescript@~5.8.3:
+  version "5.8.3"
+  resolved "https://registry.yarnpkg.com/typescript/-/typescript-5.8.3.tgz#92f8a3e5e3cf497356f4178c34cd65a7f5e8440e"
+  integrity sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==
 
 uglify-js@^3.1.4:
   version "3.19.3"
