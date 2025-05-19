@@ -870,10 +870,10 @@
   resolved "https://registry.yarnpkg.com/@types/normalize-package-data/-/normalize-package-data-2.4.4.tgz#56e2cc26c397c038fab0e3a917a12d5c5909e901"
   integrity sha512-37i+OaWTh9qeK4LSHPsyRC7NahnGotNuZvjLSgcPzblpHB3rrCJxAOgI5gCdKm7coonsaX1Of0ILiTcnZjbfxA==
 
-"@types/react-dom@^18.3.1":
-  version "18.3.6"
-  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-18.3.6.tgz#fa59a5e9a33499a792af6c1130f55921ef49d268"
-  integrity sha512-nf22//wEbKXusP6E9pfOCDwFdHAX4u172eaJI4YkDRQEZiorm6KfYnSC2SWLDMVWUOWPERmJnN0ujeAfTBLvrw==
+"@types/react-dom@^19.1.5":
+  version "19.1.5"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-19.1.5.tgz#cdfe2c663742887372f54804b16e8dbc26bd794a"
+  integrity sha512-CMCjrWucUBZvohgZxkjd6S9h0nZxXjzus6yDfUb+xLxYM7VvjKNH1tQrE9GWLql1XoOP4/Ds3bwFqShHUYraGg==
 
 "@types/react@^19.1.2":
   version "19.1.2"
@@ -3627,7 +3627,7 @@ set-cookie-parser@^2.6.0:
     react-hook-form "^7.56.1"
     react-i18next "^15.4.0"
     react-router-dom "^7.0.1"
-    shadow "file:../../../../AppData/Local/Yarn/Cache/v6/npm-shadow-0.0.2-5a408cfc-138a-4efb-a6df-83272b10f05e-1745979131676/node_modules/shadow"
+    shadow "file:."
     tailwind-merge "^2.5.4"
     tailwindcss-animate "^1.0.7"
     zod "^3.24.3"
