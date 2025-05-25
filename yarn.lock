@@ -3627,7 +3627,7 @@ set-cookie-parser@^2.6.0:
     react-hook-form "^7.56.1"
     react-i18next "^15.4.0"
     react-router-dom "^7.0.1"
-    shadow "file:../../../../AppData/Local/Yarn/Cache/v6/npm-shadow-0.0.2-5a408cfc-138a-4efb-a6df-83272b10f05e-1745979131676/node_modules/shadow"
+    shadow "file:../../../../Library/Caches/Yarn/v6/npm-shadow-0.0.2-481d28c1-2420-4674-91d6-76431c37a2f2-1748210354531/node_modules/shadow"
     tailwind-merge "^2.5.4"
     tailwindcss-animate "^1.0.7"
     zod "^3.24.3"
@@ -3653,6 +3653,11 @@ signal-exit@^4.0.1:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-4.1.0.tgz#952188c1cbd546070e2dd20d0f41c0ae0530cb04"
   integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
+
+sonner@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/sonner/-/sonner-2.0.3.tgz#de7cdbc4b6a25ac3f0a9e0aed3748e0b3d6e092e"
+  integrity sha512-njQ4Hht92m0sMqqHVDL32V2Oun9W1+PHO9NDv9FHfJjT3JT22IG4Jpo3FPQy+mouRKCXFWO+r67v6MrHX2zeIA==
 
 source-map-js@^1.2.1:
   version "1.2.1"
