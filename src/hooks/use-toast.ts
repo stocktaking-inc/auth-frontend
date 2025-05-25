@@ -17,7 +17,7 @@ function toast({ title, description, action }: ToastOptions) {
     action: action ? { label: action.label, onClick: action.onClick } : undefined,
     duration: 5000,
     closeButton: true,
-    className: 'group toast max-w-md',
+    className: 'group toast max-w-md'
   })
 }
 
