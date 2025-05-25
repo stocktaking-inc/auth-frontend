@@ -9,12 +9,11 @@ i18n
   .use(initReactI18next)
   .init({
     fallbackLng: 'ru',
-    debug: false,
     interpolation: {
       escapeValue: false
     },
     backend: {
-      loadPath: '/locales/{{lng}}.json'
+      loadPath: '/auth/locales/{{lng}}.json'
     },
     react: {
       useSuspense: true

@@ -6,7 +6,7 @@ import { routes } from '@/config/routes.ts'
 
 export const AppProvider = () => {
   return (
-    <Router basename="/auth">
+    <Router basename='/auth'>
       <div className='flex flex-col min-h-screen'>
         <main className='flex-grow flex items-center justify-center px-4'>
           <Routes>
