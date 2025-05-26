@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { useToast } from '@/hooks/use-toast'
+import { toast } from '@/hooks/use-toast'
 import { post } from '@/config/api/api'
 import { endpoints } from '@/config/api/endpoints'
 
@@ -16,7 +16,6 @@ export interface LoginResponse {
 
 export const useSubmitLogin = () => {
   const { t } = useTranslation()
-  const { toast } = useToast()
 
   return useMutation<LoginResponse, Error, LoginRequest>({
     mutationFn: async data => {
@@ -26,8 +25,7 @@ export const useSubmitLogin = () => {
     onSuccess: data => {
       toast({
         title: t('login.toasts.success.title'),
-        description: t('login.toasts.success.description'),
-        variant: 'default'
+        description: t('login.toasts.success.description')
       })
 
       // Проверяем cookies (HttpOnly не видны, но для отладки)
@@ -45,8 +43,7 @@ export const useSubmitLogin = () => {
     onError: error => {
       toast({
         title: t('login.toasts.error.title'),
-        description: error.message || t('login.toasts.error.description'),
-        variant: 'destructive'
+        description: error.message || t('login.toasts.error.description')
       })
     }
   })

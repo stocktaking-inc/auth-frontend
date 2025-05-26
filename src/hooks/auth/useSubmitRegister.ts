@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { useToast } from '@/hooks/use-toast'
+import { toast } from '@/hooks/use-toast'
 import { post } from '@/config/api/api'
 import { endpoints } from '@/config/api/endpoints'
 
@@ -18,7 +18,6 @@ export interface RegisterResponse {
 
 export const useSubmitRegister = () => {
   const { t } = useTranslation()
-  const { toast } = useToast()
 
   return useMutation<RegisterResponse, Error, RegisterRequest>({
     mutationFn: async data => {
@@ -28,8 +27,7 @@ export const useSubmitRegister = () => {
     onSuccess: data => {
       toast({
         title: t('register.toasts.success.title'),
-        description: t('register.toasts.success.description'),
-        variant: 'default'
+        description: t('register.toasts.success.description')
       })
 
       // Проверяем cookies (HttpOnly не видны, но для отладки)
@@ -47,8 +45,7 @@ export const useSubmitRegister = () => {
     onError: error => {
       toast({
         title: t('register.toasts.error.title'),
-        description: error.message || t('register.toasts.error.description'),
-        variant: 'destructive'
+        description: error.message || t('register.toasts.error.description')
       })
     }
   })
