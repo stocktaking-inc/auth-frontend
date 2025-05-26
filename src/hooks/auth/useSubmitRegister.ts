@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { toast } from '@/hooks/use-toast'
+import { toast } from "sonner"
 import { post } from '@/config/api/api'
 import { endpoints } from '@/config/api/endpoints'
 
@@ -25,15 +25,11 @@ export const useSubmitRegister = () => {
       return post<RegisterResponse>(endpoints.AUTH.REGISTER, data)
     },
     onSuccess: data => {
-      toast({
-        title: t('register.toasts.success.title'),
+      toast(t('register.toasts.success.title'), {
         description: t('register.toasts.success.description')
       })
 
-      // Проверяем cookies (HttpOnly не видны, но для отладки)
-      console.log('Cookies after register:', document.cookie)
 
-      // Редирект с токенами в query-параметрах
       const urlParams = new URLSearchParams(window.location.search)
       const redirectUrl =
         urlParams.get('redirect') ||
@@ -43,8 +39,7 @@ export const useSubmitRegister = () => {
       window.location.href = redirectUrl
     },
     onError: error => {
-      toast({
-        title: t('register.toasts.error.title'),
+      toast(t('register.toasts.error.title'), {
         description: error.message || t('register.toasts.error.description')
       })
     }

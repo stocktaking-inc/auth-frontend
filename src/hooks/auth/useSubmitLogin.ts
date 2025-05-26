@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { toast } from '@/hooks/use-toast'
+import { toast } from "sonner"
 import { post } from '@/config/api/api'
 import { endpoints } from '@/config/api/endpoints'
 
@@ -23,15 +23,10 @@ export const useSubmitLogin = () => {
       return post<LoginResponse>(endpoints.AUTH.LOGIN, data)
     },
     onSuccess: data => {
-      toast({
-        title: t('login.toasts.success.title'),
+      toast(t('login.toasts.success.title'), {
         description: t('login.toasts.success.description')
       })
 
-      // Проверяем cookies (HttpOnly не видны, но для отладки)
-      console.log('Cookies after login:', document.cookie)
-
-      // Редирект с токенами в query-параметрах
       const urlParams = new URLSearchParams(window.location.search)
       const redirectUrl =
         urlParams.get('redirect') ||
@@ -41,8 +36,7 @@ export const useSubmitLogin = () => {
       window.location.href = redirectUrl
     },
     onError: error => {
-      toast({
-        title: t('login.toasts.error.title'),
+      toast(t('login.toasts.error.title'), {
         description: error.message || t('login.toasts.error.description')
       })
     }
