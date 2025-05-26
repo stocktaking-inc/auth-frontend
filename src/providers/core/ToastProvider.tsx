@@ -1,5 +1,5 @@
-import { Toaster } from '@/components/ui/lib/toaster.tsx'
+import { Sonner } from '@/components/ui/lib/sonner.tsx'
 
 export const ToastProvider = () => {
-  return <Toaster />
+  return <Sonner />
 }
