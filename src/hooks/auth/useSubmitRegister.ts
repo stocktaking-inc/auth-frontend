@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { toast } from "sonner"
+import { toast } from 'sonner'
 import { post } from '@/config/api/api'
 import { endpoints } from '@/config/api/endpoints'
 
@@ -28,7 +28,6 @@ export const useSubmitRegister = () => {
       toast(t('register.toasts.success.title'), {
         description: t('register.toasts.success.description')
       })
-
 
       const urlParams = new URLSearchParams(window.location.search)
       const redirectUrl =

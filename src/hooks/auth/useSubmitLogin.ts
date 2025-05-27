@@ -1,6 +1,6 @@
 import { useMutation } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { toast } from "sonner"
+import { toast } from 'sonner'
 import { post } from '@/config/api/api'
 import { endpoints } from '@/config/api/endpoints'
 
