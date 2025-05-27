@@ -20,7 +20,7 @@ export interface LoginResponse {
 export const useSubmitLogin = () => {
   const { t } = useTranslation()
 
-  return useMutation<LoginResponse, Error, LoginRequest>({
+  return useMutation<LoginResponse, Error, LoginRequest, {redirectUrl?: string}>({
     mutationFn: async data => {
       return post<LoginResponse>(endpoints.AUTH.LOGIN, data)
     },
