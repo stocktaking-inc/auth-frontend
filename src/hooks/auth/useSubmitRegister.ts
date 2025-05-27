@@ -26,7 +26,7 @@ export const useSubmitRegister = () => {
     mutationFn: async data => {
       return post<RegisterResponse>(endpoints.AUTH.REGISTER, data)
     },
-    onSuccess: (data) => {
+    onSuccess: data => {
       toast(t('register.toasts.success.title'), {
         description: t('register.toasts.success.description')
       })

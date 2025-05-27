@@ -10,8 +10,11 @@ export interface LoginRequest {
 }
 
 export interface LoginResponse {
-  accessToken: string
-  refreshToken: string
+  tokens: {
+    accessToken: string
+    refreshToken: string
+  }
+  redirectUrl?: string
 }
 
 export const useSubmitLogin = () => {
@@ -19,21 +22,13 @@ export const useSubmitLogin = () => {
 
   return useMutation<LoginResponse, Error, LoginRequest>({
     mutationFn: async data => {
-      console.log('Sending login request:', data)
       return post<LoginResponse>(endpoints.AUTH.LOGIN, data)
     },
     onSuccess: data => {
       toast(t('login.toasts.success.title'), {
         description: t('login.toasts.success.description')
       })
-
-      const urlParams = new URLSearchParams(window.location.search)
-      const redirectUrl =
-        urlParams.get('redirect') ||
-        `http://localhost:3000/dashboard?accessToken=${encodeURIComponent(data.accessToken)}&refreshToken=${encodeURIComponent(data.refreshToken)}`
-
-      console.log('Redirecting to:', redirectUrl)
-      window.location.href = redirectUrl
+      return { redirectUrl: data.redirectUrl }
     },
     onError: error => {
       toast(t('login.toasts.error.title'), {

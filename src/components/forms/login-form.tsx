@@ -2,6 +2,7 @@ import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { zodResolver } from '@hookform/resolvers/zod'
+import { useEffect } from 'react'
 
 import { Button } from '@/components/ui/lib/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/lib/card'
@@ -30,7 +31,22 @@ export const LoginForm = () => {
     }
   })
 
-  const { mutate: submitLogin, isPending } = useSubmitLogin()
+  const { mutate: submitLogin, isPending, data } = useSubmitLogin()
+
+  const onSubmit = (data: { email: string; password: string }) => {
+    submitLogin(data)
+  }
+
+  useEffect(() => {
+    if (data?.redirectUrl) {
+      const form = document.createElement('form')
+      form.method = 'GET'
+      form.action = data.redirectUrl
+      document.body.appendChild(form)
+      form.submit()
+      document.body.removeChild(form)
+    }
+  }, [data])
 
   return (
     <Card className='mx-auto max-w-sm'>
@@ -41,7 +57,7 @@ export const LoginForm = () => {
         </CardDescription>
       </CardHeader>
       <CardContent>
-        <form onSubmit={handleSubmit(data => submitLogin(data))}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className='grid gap-4'>
             <div className='grid gap-2'>
               <Label htmlFor='email'>{t('login.form.email')}</Label>
