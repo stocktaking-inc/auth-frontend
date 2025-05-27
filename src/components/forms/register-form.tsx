@@ -1,18 +1,15 @@
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-
 import { zodResolver } from '@hookform/resolvers/zod'
-
 import { Button } from '@/components/ui/lib/button'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/lib/card'
 import { Input } from '@/components/ui/lib/input'
 import { Label } from '@/components/ui/lib/label'
-
 import { routes } from '@/config/routes'
-
 import { getRegisterSchema } from './utils/schemas'
 import { useSubmitRegister } from '@/hooks/auth/useSubmitRegister'
+import { useEffect } from 'react'
 
 export const RegisterForm = () => {
   const { t } = useTranslation()
@@ -33,7 +30,7 @@ export const RegisterForm = () => {
     }
   })
 
-  const { mutate: submitRegister, isPending } = useSubmitRegister()
+  const { mutate: submitRegister, isPending, data } = useSubmitRegister()
 
   const onSubmit = (data: {
     name: string
@@ -47,6 +44,17 @@ export const RegisterForm = () => {
       password: data.password
     })
   }
+
+  useEffect(() => {
+    if (data?.redirectUrl) {
+      const form = document.createElement('form')
+      form.method = 'GET'
+      form.action = data.redirectUrl
+      document.body.appendChild(form)
+      form.submit()
+      document.body.removeChild(form)
+    }
+  }, [data])
 
   return (
     <Card className='mx-auto max-w-sm'>

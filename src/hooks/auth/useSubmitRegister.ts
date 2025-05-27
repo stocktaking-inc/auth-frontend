@@ -12,30 +12,25 @@ export interface RegisterRequest {
 }
 
 export interface RegisterResponse {
-  accessToken: string
-  refreshToken: string
+  tokens: {
+    accessToken: string
+    refreshToken: string
+  }
+  redirectUrl?: string
 }
 
 export const useSubmitRegister = () => {
   const { t } = useTranslation()
 
-  return useMutation<RegisterResponse, Error, RegisterRequest>({
+  return useMutation<RegisterResponse, Error, RegisterRequest, { redirectUrl?: string }>({
     mutationFn: async data => {
-      console.log('Sending register request:', data)
       return post<RegisterResponse>(endpoints.AUTH.REGISTER, data)
     },
-    onSuccess: data => {
+    onSuccess: (data) => {
       toast(t('register.toasts.success.title'), {
         description: t('register.toasts.success.description')
       })
-
-      const urlParams = new URLSearchParams(window.location.search)
-      const redirectUrl =
-        urlParams.get('redirect') ||
-        `http://localhost:3000?accessToken=${encodeURIComponent(data.accessToken)}&refreshToken=${encodeURIComponent(data.refreshToken)}`
-
-      console.log('Redirecting to:', redirectUrl)
-      window.location.href = redirectUrl
+      return { redirectUrl: data.redirectUrl }
     },
     onError: error => {
       toast(t('register.toasts.error.title'), {
